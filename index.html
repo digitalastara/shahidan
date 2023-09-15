@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="fa" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بنیاد شهید شهرستان آستارا</title>
+    <link rel="stylesheet" href="shahid.css">
+    <link rel="stylesheet" href="style.css">
+  
+  
+  
+<style>
+    a {
+        text-decoration: none;
+    }
+    body {
+    margin:0;
+    }
+    .header {
+    position:relative;
+    text-align:center;
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    color:white;
+    }
+
+    .inner-header {
+    height:35vh;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    }
+
+    .flex { /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+
+    .waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+    }
+
+    .content {
+    position:relative;
+    height:20vh;
+    text-align:center;
+    background-color: white;
+    }
+
+    /* Animation */
+
+    .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+    }
+    .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+    }
+    .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+    }
+    .parallax > use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 13s;
+    }
+    .parallax > use:nth-child(4) {
+        animation-delay: -5s;
+        animation-duration: 20s;
+        }
+    @keyframes move-forever {
+        0% {
+        transform: translate3d(-90px,0,0);
+        }
+        100% { 
+            transform: translate3d(85px,0,0);
+        }
+    }
+    /*Shrinking for mobile*/
+    @media (max-width: 768px) {
+        .waves {
+            height:40px;
+            min-height:40px;
+        }
+        .content {
+            height:30vh;
+        }
+        h1 {
+            font-size:24px;
+        }
+    }
+    button {
+        width: 140px;
+        height: 45px;
+        font-family: BNazanin;
+        font-size: 18px;
+        font-weight: 700;
+        color: #000;
+        background-color: #fff;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+            }
+        button:hover {
+            background-color: #2EE59D;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: #fff;
+            transform: translateY(-7px);
+        }
+        header {
+            height: 45vh;
+            border: 1px solid skyblue;
+            /* border-radius: 15px; */
+        }
+        #top {
+            position:absolute;
+            align-items: center;
+            justify-content:right;
+            display:inline-flex;
+            height: 15vh;
+            width: 75vw;
+            /* background: lightgreen; */
+            text-align: right;
+            margin-top: 0px;
+            top: 10px;
+            right: 10px;
+            /* border: 1px solid red; */
+        }
+        #bottom {
+            background: #ebf5fc;
+            height: 35vh;
+        }
+        table {
+            /* border: 0px solid red; */
+            margin-left: 10vw;
+            margin-top: -30vh;
+            rotate: 45deg;
+        }
+        td {
+            border:1px solid red;
+            width:13vh;
+            height:13vh;
+            overflow: hidden;
+        }
+        .notSeen {
+            visibility: hidden;
+        }
+        .seen {
+            background-size:170%;
+            background-position: center;
+        }
+        
+        td img {
+            width: 40vh;
+            height: 40vh;
+            /* border:1px solid red; */
+            rotate: -45deg;
+        }
+        .header {
+            margin-top: -30vh;
+            z-index: -1;
+        }
+        /* #centerPic {
+            background-image:url("victory.png");
+        } */
+        rect.bg {
+            width: 100%;
+            height: 40%;
+            fill: url('#linear-gradient');
+        }
+        circle.sun {
+            fill: #f4d941;
+            stroke: white;
+            stroke-width: 0.025rem;
+            filter: url('#dropshadow');
+        }
+            .drop-shadow {
+            filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+        }
+        #flag {
+            height:15vh;
+            width: 15vw;
+            rotate: 0deg;
+            margin-top: 0px;
+            display: inline;
+            /* border: 1px solid red; */
+        }
+        footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: skyblue;
+    height: auto;
+    width: 100vw;
+
+    padding-top: 40px;
+    color: red;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 42px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 800px;
+    margin: 12px auto;
+    line-height: 28px;
+    font-size: 18px;
+    color: red;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+
+    border-radius: 50%;
+
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+
+
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background:darkcyan;
+    width: 100vw;
+    padding: 20px;
+padding-bottom: 40px;
+    text-align: center;
+}
+.footer-bottom p{
+float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom p a{
+  color:#44bae8;
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+.footer-menu{
+  float: right;
+
+}
+.footer-menu ul{
+  display: flex;
+}
+.footer-menu ul li{
+padding-right: 10px;
+display: block;
+}
+.footer-menu ul li a{
+  color: #cfd2d6;
+  text-decoration: none;
+}
+.footer-menu ul li a:hover{
+  color: #27bcda;
+}
+
+@media (max-width:500px) {
+.footer-menu ul{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+    <header>
+        <img src="flag.jpg" id="flag">
+        <section id="top">
+            <button id="btnOne"><a href="page4.html">شهیدان</a></button>
+            <button>چند رسانه ای</button>
+            <button><a href="#footer">تماس با ما</a></button>
+            <button><a href="https://www.isaar.ir/"> بنیاد شهید</a></button>
+            <button>خانه</button>
+        </section>
+        <section id="bottom">
+            <p></p>
+        </section>
+        
+    </header>
+
+    <table>
+        <tr>
+            <td class="notSeen">&nbsp1</td>
+            <td class="seen" id="pic1">&nbsp</td>
+            <td class="seen" id="pic2">&nbsp</td>
+            <td class="notSeen">&nbsp4</td>
+        </tr>
+        <tr>
+            <td class="seen" id="pic3">&nbsp</td>
+            <td colspan="2" rowspan="2" id="centerPic" class="seen">&nbsp</td>
+            <td class="seen" id="pic4">&nbsp</td>
+        </tr>
+        <tr>
+            <td class="seen" id="pic5">&nbsp</td>
+            <td class="seen" id="pic6">&nbsp</td>
+        </tr>
+        <tr>
+            <td class="notSeen">&nbsp13</td>
+            <td class="seen" id="pic7">&nbsp</td>
+            <td class="seen" id="pic8">&nbsp</td>
+            <td class="notSeen">&nbsp16</td>
+        </tr>
+        <tr>
+            <td class="notSeen">&nbsp17</td>
+            <td class="seen" id="pic9"></td>
+            <td class="notSeen">&nbsp19</td>
+            <td class="notSeen">&nbsp20</td>
+        </tr>
+    </table>
+
+<div class="header">
+    <div class="inner-header flex">
+        <div>&nbsp</div>
+        <div>&nbsp</div>
+        <h1>یادواره شهیدان شهرستان آستارا</h1>
+    </div>
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>
+    </div>
+</div>
+<!-- <footer id="footer">
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 1000 600">
+    <filter id="dropshadow" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+         <feComponentTransfer in="SourceAlpha">
+             <feFuncR type="discrete" tableValues="245"/>
+             <feFuncG type="discrete" tableValues="218"/>
+             <feFuncB type="discrete" tableValues="69"/>
+         </feComponentTransfer>
+         <feGaussianBlur stdDeviation="4"/>
+         <feOffset dx="0" dy="0" result="shadow"/>
+         <feComposite in="SourceGraphic" in2="shadow" operator="over"/>
+       </filter>
+      
+        <linearGradient id="linear-gradient" x1="799.28" y1="236.75" x2="799.28" y2="-151.63" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#cbe9f8"/><stop offset="0.62" stop-color="#9cc5ea"/><stop offset="1" stop-color="#8ab3d7"/></linearGradient>
+     <rect class="bg"></rect>
+      
+    <circle class="sun" cx="125" cy="125" r="100"/>
+     
+    </svg>
+    
+    
+</footer> -->
+<footer id="footer">
+    <div class="footer-content">
+        <h3>مجتمع فنی دیجیتال آستارا</h3>
+        <p>این برنامه توسط شرکت دیجیتال آستارا و با همکاری گروه کامپیوتر هنرستان عصرپیام طراحی شده است</p>
+        <!-- <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul> -->
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy; <a href="#">Digital Astara Computer Learning Center</a>  </p>
+                <!-- <div class="footer-menu">
+                  <ul class="f-menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Blog</a></li>
+                  </ul>
+                </div> -->
+    </div>
+
+</footer>
+<script src="shahid5.js"></script>
+<!-- mehdi.asgarpour.link@gmail.com-->
+<!-- nimagiyahkar@gmail.com -->
+</body>
+</html>
